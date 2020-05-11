@@ -33,7 +33,7 @@
             console.log(graph_data[0]);
             graph_data.forEach(function(d) {
                 if (d.Previous_Article !== "") {
-                    data.addRow(d.Title, d.Previous_Article, d.Level);
+                    data.addRow([d.Title, d.Previous_Article, d.Level]);
                 }
             });
         });

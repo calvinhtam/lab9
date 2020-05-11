@@ -36,6 +36,7 @@
                     data.addRow([d.Title, d.Previous_Article, +d.Level]);
                 }
             });
+            console.log(data);
         });
 
         data.addRows([
@@ -51,6 +52,8 @@
         var options = {
           width: 600,
         };
+
+        console.log(data);
 
         // Instantiates and draws our chart, passing in some options.
         var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));

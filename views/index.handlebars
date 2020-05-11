@@ -42,11 +42,22 @@
             console.log(temp_data);
             data.addRows(temp_data);
             console.log(data);
+
+            // Sets chart options.
+            var options = {
+              width: 600,
+            };
+
+            // Instantiates and draws our chart, passing in some options.
+             
+            var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+            chart.draw(data, options);
         });
 
+        /*
         // data.addRows(temp_data);
         console.log(temp_data);
-        /*
+        
         data.addRows([
           [ 'A', 'X', 5 ],
           [ 'A', 'Y', 7 ],
@@ -55,7 +66,7 @@
           [ 'B', 'Y', 9 ],
           [ 'B', 'Z', 4 ]
         ]);
-        */
+        
 
         // Sets chart options.
         var options = {
@@ -70,6 +81,7 @@
         // Instantiates and draws our chart, passing in some options.
         var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
         chart.draw(data, options);
+        */
       }
     </script>
 

@@ -35,14 +35,14 @@
             graph_data.forEach(function(d) {
                 if (d.Previous_Article !== "") {
                     temp_data.push([d.Title, d.Previous_Article, +d.Level]);
-                    data.addRow([d.Title, d.Previous_Article, +d.Level]);
+                    //data.addRow([d.Title, d.Previous_Article, +d.Level]);
                 }
             });
             console.log(data);
         });
 
         data.addRows(temp_data);
-
+        /*
         data.addRows([
           [ 'A', 'X', 5 ],
           [ 'A', 'Y', 7 ],
@@ -51,6 +51,7 @@
           [ 'B', 'Y', 9 ],
           [ 'B', 'Z', 4 ]
         ]);
+        */
 
         // Sets chart options.
         var options = {

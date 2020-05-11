@@ -26,6 +26,7 @@
 
       function drawChart() {
         var data = new google.visualization.DataTable();
+        var temp_data = [];
         data.addColumn('string', 'From');
         data.addColumn('string', 'To');
         data.addColumn('number', 'Weight');
@@ -33,11 +34,14 @@
             console.log(graph_data[0]);
             graph_data.forEach(function(d) {
                 if (d.Previous_Article !== "") {
+                    temp_data.push([d.Title, d.Previous_Article, +d.Level]);
                     data.addRow([d.Title, d.Previous_Article, +d.Level]);
                 }
             });
             console.log(data);
         });
+
+        data.addRows(temp_data);
 
         data.addRows([
           [ 'A', 'X', 5 ],
